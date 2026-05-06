@@ -29,9 +29,10 @@ from docling.document_converter import DocumentConverter, PdfFormatOption
 import os
 
 strUserID = os.getlogin()
-
 #  Note:  (change from my file structure)
-artifacts_path = "~/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv/models"
+os.chdir("/home/"+strUserID+"/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv")
+
+artifacts_path = "models"
 pipeline_options = PdfPipelineOptions(artifacts_path=artifacts_path)
 
 doc_converter = DocumentConverter (
@@ -39,8 +40,7 @@ doc_converter = DocumentConverter (
         InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
 })
 
-#  Note:  /home/ UserID is needed. (change from my file structure)
-source="/home/"+strUserID+"/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv/2408.09869v5.pdf"
+source="2408.09869v5.pdf"
 result = doc_converter.convert(source)
 
 strExtract = ""
