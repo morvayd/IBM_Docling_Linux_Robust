@@ -1,7 +1,7 @@
 #  Linux install and setup
 
 #  Note:  (change from my file structure)
-cd "~/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv"
+cd ~/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv
 
 #  Initial venv creation
 python3 -m venv venv
