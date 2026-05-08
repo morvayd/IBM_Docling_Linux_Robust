@@ -1,7 +1,7 @@
 #  Reference:  https://docling-project.github.io/docling/
 
 #  Note:  (change from my file structure)
-#  cd "~/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv"
+#  cd ~/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv
 
 #  source "venv/bin/activate"
 
@@ -27,8 +27,9 @@ from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import RapidOcrOptions, PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 import os
+import getpass
 
-strUserID = os.getlogin()
+strUserID = getpass.getuser()
 #  Note:  (change from my file structure)
 os.chdir("/home/"+strUserID+"/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv")
 
