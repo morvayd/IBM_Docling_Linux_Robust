@@ -26,9 +26,11 @@ print(doc.export_to_markdown())  # output: "### Docling Technical Report[...]"
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import RapidOcrOptions, PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
+
+import getpass
 import os
 
-strUserID = os.getlogin()
+strUserID = getpass.getuser()
 #  Note:  (change from my file structure)
 os.chdir("/home/"+strUserID+"/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv")
 
@@ -122,3 +124,4 @@ venv/bin/python3 -m pip freeze > requirements.txt
 #  Then can compare on a new machine - 
 #  to install using requirements.txt
 #  venv/bin/python3 -m pip install  -r requirements.txt
+
