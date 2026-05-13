@@ -7,7 +7,7 @@ cd ~/DataSci/PythonWorkArea/IBMDocling/IBMDoclingVenv
 python3 -m venv venv
 
 #  Very specific to the venv created - verify before activating.
-source "venv/bin/activate"
+source venv/bin/activate
 
 #  Install docling - defaults to RapidOCR
 venv/bin/python3 -m pip install docling
